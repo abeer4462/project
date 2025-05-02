@@ -1,0 +1,89 @@
+<html lang="ar">
+<head>
+<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glistéra - السلة</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="header">
+               <li><a href="Glistéra-home.html">الصفحة الرئيسية</a></li>
+                <li><a href="shop.html">المتجر</a></li>
+                <li><a href="SkinAnalysis.html">تحليل البشرة</a></li>
+                <li><a href="cart.html">السلة</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+   <main>
+        <h1>🛒 سلة المشتريات</h1>
+ 
+        <!-- المنتجات التي أضافها المستخدم -->
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th>الصورة</th>
+                    <th>اسم المنتج</th>
+                    <th>السعر</th>
+                    <th>الكمية</th>
+                    <th>الإجمالي</th>
+                    <th>إزالة</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- المنتجات تضاف هنا ديناميكياً -->
+            </tbody>
+        </table>
+ 
+ 
+        <!-- إجمالي الطلب -->
+        <div style="margin-top: 20px;">
+            <h3>💰 المجموع النهائي: <span id="total-price">0</span> ر.س</h3>
+            <button type="button" onclick="window.location.href='checkout.html'">إتمام الطلب</button>
+ 
+        <button type="button" onclick="window.location.href='shop.html'">أكمل التسوق</button>
+ 
+        </div>
+    </main>
+ 
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة &copy; Glistéra</p>
+        <p>تابعونا على <a href="#">إنستقرام</a> | <a href="#">تويتر</a></p>
+    </footer>
+ <script>
+window.onload = function() {
+  var cart = JSON.parse(localStorage.getItem("cart")) || [];
+  var tbody = document.getElementById("cart-items");
+  var total = 0;
+
+  for (var i = 0; i < cart.length; i++) {
+    var item = cart[i];
+    var tr = document.createElement("tr");
+    tr.innerHTML = "<td><img src='" + item.image + "' width='60'></td>";
+    tr.innerHTML += "<td>" + item.name + "</td>";
+    tr.innerHTML += "<td>" + item.price + " ر.س</td>";
+    tr.innerHTML += "<td>" + item.quantity + "</td>";
+    tr.innerHTML += "<td>" + (item.price * item.quantity) + " ر.س</td>";
+    tr.innerHTML += "<td><button onclick='removeItem(" + i + ")'>❌</button></td>";
+    tbody.appendChild(tr);
+    total += item.price * item.quantity;
+  }
+
+  // هنا نحط مجموع الأسعار
+  document.getElementById("total-price").innerText = total;
+}
+
+// تابع إزالة منتج من السلة
+function removeItem(index) {
+  var cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  location.reload(); // تحديث الصفحة لعرض التغيير
+}
+</script>
+</body>
+</html>

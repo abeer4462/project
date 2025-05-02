@@ -1,0 +1,1030 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  color: #3e2b2b;
+  background-color: #2c2c2c; /* خلفية داكنة */
+ 
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* خلفية الصورة - تأثير الصورة الخلفية */
+.background-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* الهيدر */
+header {
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+ul.header {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+ul.header li a {
+  text-decoration: none;
+  color: #3e2b2b;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+ul.header li a:hover {
+  background-color: #f7d3d3;
+  color: white;
+}
+
+/* المحتوى الرئيسي */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding-top: 100px;
+}
+
+/* تنسيق الأزرار */
+#buttons-container {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 40px 30px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+#buttons-container button {
+  background-color: #f7d3d3;
+  color: #3e2b2b;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+#buttons-container button:hover {
+  background-color: #e9bcbc;
+  color: white;
+}
+
+/* الفوتر */
+.footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #eee;
+  margin-top: 40px;
+}
+
+.footer a {
+  color: #eee;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* صفحة التسجيل - تنسيق الفورم */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 40px;
+  min-height: calc(100vh - 200px);
+  text-align: center;
+}
+/* خلفية الصورة */
+.background-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #3e2b2b;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 30px 25px;
+  border-radius: 25px;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #3e2b2b;
+}
+
+form label {
+  font-weight: bold;
+  text-align: right;
+  display: block;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+form input:focus {
+  border-color: #f7d3d3;
+  background-color: #fff9f9;
+}
+
+form button {
+  background-color: #f7d3d3;
+  color: #3e2b2b;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e9bcbc;
+  color: white;
+}
+
+main p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #eee;
+}
+
+main a {
+  color: #f7d3d3;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+/* صفحة تحليل البشرة */
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #3e2b2b;  /* لون النص الرئيسي البني الغامق */
+  text-align: center;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #6f4e4e;  /* لون نص أقل غموضًا قليلاً */
+  text-align: center;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.2);  /* خلفية شفافة مع لون أبيض خفيف */
+  backdrop-filter: blur(8px);  /* تأثير الضبابية على الخلفية */
+  padding: 30px 25px;  /* إضافة مسافة داخلية حول النموذج */
+  border-radius: 25px;  /* إضافة زوايا دائرية للنموذج */
+  max-width: 800px;  /* تعيين أقصى عرض للنموذج ليكون 800px */
+  width: 100%;  /* عرض النموذج يشغل كامل المساحة المتاحة */
+  display: flex;  /* استخدام الفليكس للتوزيع */
+  flex-direction: column;  /* ترتيب العناصر داخل النموذج عموديًا */
+  gap: 20px;  /* إضافة مسافة بين العناصر داخل النموذج */
+  margin: 0 auto;  /* مركز النموذج في الصفحة */
+  color: #3e2b2b;  /* تحديد لون النص داخل النموذج */
+  text-align: right; /* جعل النصوص والمحارف تكون باليمين */
+}
+
+/* تنسيق الأسئلة */
+fieldset {
+  border: none;  /* إزالة الحدود الافتراضية للـ fieldset */
+  margin-bottom: 15px;  /* إضافة مسافة أسفل كل سؤال */
+}
+
+legend {
+  font-size: 18px;  /* حجم الخط أكبر قليلاً للسؤال */
+  font-weight: bold;  /* جعل النص ثقيل لتمييزه */
+  color: #fff;  /* اللون الأبيض للنص */
+  background-color: #9c6b6b;  /* اللون البني الفاتح للخلفية */
+  padding: 8px;  /* إضافة مسافة داخلية حول النص */
+  border-radius: 10px;  /* إضافة زوايا دائرية للخلفية */
+  text-align: right;  /* محاذاة النص في الجهة اليمنى */
+  width: 100%;  /* التأكد من أن العنصر يحتل كامل العرض */
+}
+
+/* تخصيص الإجابات */
+label {
+  font-size: 16px;  /* حجم الخط للإجابة */
+  display: block;  /* عرض الإجابة في سطر منفصل */
+  margin-bottom: 10px;  /* إضافة مسافة بين الإجابات */
+  padding-right: 10px;  /* إضافة مسافة إضافية على اليمين */
+}
+
+/* تخصيص الـ radio buttons */
+input[type="radio"] {
+  margin-right: 10px;  /* إضافة مسافة بين الزر والنص */
+}
+
+/* تخصيص الإجابة المختارة */
+input[type="radio"]:checked + label {
+  color: #9c6b6b;  /* اللون البني الغامق للإجابة المختارة */
+}
+
+/* تنسيق زر الإرسال */
+button {
+  background-color: #f7d3d3;  /* اللون الوردي الفاتح */
+  color: #3e2b2b;  /* النص داخل الزر باللون البني الغامق */
+  border: none;  /* إزالة الحدود حول الزر */
+  padding: 12px;  /* إضافة مسافة داخلية حول الزر */
+  font-size: 16px;  /* حجم الخط داخل الزر */
+  border-radius: 30px;  /* جعل الزر ذو زوايا دائرية */
+  cursor: pointer;  /* تغيير شكل المؤشر عند المرور على الزر */
+  transition: 0.3s ease;  /* إضافة تأثير انتقال عند التمرير */
+  margin-top: 20px;  /* إضافة مسافة فوق الزر */
+}
+
+button:hover {
+  background-color: #e9bcbc;  /* تغيير الخلفية إلى لون أغمق */
+  color: white;  /* تغيير النص إلى أبيض */
+}
+/* خلفية صفحة السلة */
+body {
+  background-color: #f7f7f7;  /* خلفية فاتحة أنيقة */
+}
+
+/* تنسيق العنوان "سلة المشتريات" */
+h1 {
+  font-size: 36px;
+  color: #3e2b2b;  /* اللون البني الغامق للنص */
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* تنسيق جدول السلة */
+table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #9c6b6b;  /* اللون البني الفاتح لعنوان الجدول */
+  color: white;  /* نص أبيض في عنوان الجدول */
+  font-size: 18px;
+}
+
+td {
+  background-color: #fff;  /* خلفية بيضاء للخلايا */
+}
+
+/* تنسيق الأزرار */
+button {
+  background-color: #f7d3d3;  /* لون الوردي الفاتح */
+  color: #3e2b2b;  /* نص بني غامق */
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #e9bcbc;  /* تغيير اللون عند التمرير */
+  color: white;  /* تغيير النص إلى الأبيض */
+}
+
+/* تنسيق مربع كود الخصم */
+#discount-code {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 250px;
+}
+
+#apply-discount {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f7d3d3;
+  color: #3e2b2b;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 10px;
+}
+
+#apply-discount:hover {
+  background-color: #e9bcbc;
+  color: white;
+}
+
+/* تنسيق المجموع النهائي */
+#total-price {
+  color: #9c6b6b;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* تنسيق الفوتر */
+footer {
+  background-color: #f7d3d3;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3e2b2b;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #3e2b2b;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* صفحة إتمام الدفع */
+
+/* تنسيق العنوان "إتمام الطلب" */
+h1 {
+  font-size: 40px;
+  color: #3e2b2b;  /* اللون البني الغامق للنص */
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* تنسيق النموذج */
+form {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);  /* تأثير الضبابية على الخلفية */
+  padding: 30px 25px;
+  border-radius: 25px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  color: #3e2b2b;
+  text-align: right;
+  margin-top: 40px;
+}
+
+/* تنسيق الـ fieldset */
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #9c6b6b;  /* خلفية بني فاتح */
+  padding: 10px;
+  border-radius: 10px;
+  text-align: right;
+}
+
+/* تنسيق المدخلات داخل النموذج */
+input[type="text"], input[type="month"], textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* تنسيق زر الإرسال */
+button {
+  background-color: #f7d3d3;  /* اللون الوردي الفاتح */
+  color: #3e2b2b;  /* النص داخل الزر باللون البني الغامق */
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #e9bcbc;  /* تغيير اللون عند التمرير */
+  color: white;  /* تغيير النص إلى الأبيض */
+}
+
+/* الفوتر */
+footer {
+  background-color: #f7d3d3;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3e2b2b;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #3e2b2b;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* صفحة تواصل معنا */
+
+/* تنسيق العنوان "تواصل معنا" */
+h1 {
+  font-size: 36px;
+  color: #3e2b2b;  /* اللون البني الغامق للنص */
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* تنسيق النموذج */
+form {
+  background-color: rgba(255, 255, 255, 0.8);  /* خلفية شفافة مع لون أبيض خفيف */
+  padding: 30px 25px;
+  border-radius: 25px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  color: #3e2b2b;
+  text-align: right;
+  margin-top: 40px;
+}
+
+/* تنسيق الحقول داخل النموذج */
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* تنسيق زر الإرسال */
+button {
+  background-color: #f7d3d3;  /* اللون الوردي الفاتح */
+  color: #3e2b2b;  /* النص داخل الزر باللون البني الغامق */
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #e9bcbc;  /* تغيير اللون عند التمرير */
+  color: white;  /* تغيير النص إلى الأبيض */
+}
+
+/* تنسيق الفوتر */
+footer {
+  background-color: #f7d3d3;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3e2b2b;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #3e2b2b;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* صفحة تأكيد الطلب */
+
+/* تنسيق العنوان "تم تأكيد طلبك بنجاح!" */
+h1 {
+  font-size: 40px;
+  color: #3e2b2b;  /* اللون البني الغامق للنص */
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* تنسيق الفقرات */
+p {
+  font-size: 18px;
+  color: #6f4e4e;  /* لون النص الفاتح */
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.6; /* مسافة بين الأسطر */
+}
+
+/* النص الغامق الخاص بتفاصيل الطلب ووقت الوصول */
+.details-text {
+  font-size: 18px;
+  color: #9c6b6b;  /* اللون البني الغامق */
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* تنسيق الرابط "العودة إلى المتجر" */
+a {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #9c6b6b;  /* اللون البني الفاتح */
+  text-decoration: none;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #3e2b2b;  /* تغير اللون عند التمرير */
+  text-decoration: underline;
+}
+
+/* الفوتر */
+footer {
+  background-color: #f7d3d3;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3e2b2b;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #3e2b2b;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* صفحة المتجر */
+
+/* تنسيق العنوان "منتجاتنا" */
+h1 {
+  font-size: 40px;
+  color: #3e2b2b;  /* اللون البني الغامق للنص */
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* تنسيق الحاوية التي تحتوي على المنتجات */
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* تنسيق كل منتج */
+.product {
+  background-color: #fff; /* خلفية بيضاء لكل منتج */
+  padding: 20px;
+  border-radius: 15px;  /* إضافة زوايا دائرية */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* تأثير الظل حول كل منتج */
+  text-align: center;
+  width: 200px;  /* عرض ثابت للمنتجات */
+  transition: transform 0.3s ease-in-out; /* تأثير تحريك عندما يمر المستخدم */
+}
+
+.product:hover {
+  transform: scale(1.05); /* تكبير المنتج عند التمرير عليه */
+}
+
+/* تنسيق الصورة داخل كل منتج */
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;  /* زوايا دائرية للصورة */
+}
+
+/* تنسيق نص المنتج */
+.product p {
+  font-size: 18px;
+  color: #3e2b2b;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* تنسيق الفوتر */
+footer {
+  background-color: #f7d3d3;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3e2b2b;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #3e2b2b;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* صفحة أحمر الشفاه */
+
+/* تنسيق العنوان "أحمر شفاه" */
+
+h1 {
+  font-size: 36px;
+  color: #000000;  /* اللون الأسود الداكن */
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* تنسيق الصورة */
+main img {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+  border-radius: 15px;
+}
+
+/* تنسيق النص */
+p {
+  font-size: 18px;
+  color: #000000;  /* استخدام اللون الأسود الداكن للنص */
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+/* تخصيص زر الإضافة إلى السلة */
+button {
+  background-color: #f7d3d3;
+  color: #000000;  /* نص الزر باللون الأسود */
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #e9bcbc;
+  color: white;
+}
+
+/* الفوتر */
+footer {
+  background-color: #f7d3d3;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;  /* استخدام اللون الأسود الداكن للنص في الفوتر */
+  margin-top: 40px;
+}
+
+footer a {
+  color: #000000;  /* الروابط باللون الأسود */
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* صفحة اعرفي ما يناسبك */
+
+/* تنسيق العنوان "كيف يمكننا مساعدتك؟" */
+h1 {
+  font-size: 36px;
+  color: #3e2b2b;  /* اللون البني الغامق للنص */
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* تنسيق الأزرار */
+button {
+  background-color: #f7d3d3;  /* اللون الوردي الفاتح */
+  color: #3e2b2b;  /* النص داخل الزر باللون البني الغامق */
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 300px;
+}
+
+button:hover {
+  background-color: #e9bcbc;
+  color: white;
+}
+
+/* تنسيق الفوتر */
+footer {
+  background-color: #f7d3d3;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3e2b2b;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #3e2b2b;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* صفحة "كيف يمكننا مساعدتك؟" */
+
+/* تنسيق العنوان "كيف يمكننا مساعدتك؟" */
+h1 {
+  font-size: 36px;
+  color: #3e2b2b;  /* اللون البني الغامق للنص */
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* تنسيق الأزرار */
+button {
+  background-color: #f7d3d3;  /* اللون الوردي الفاتح */
+  color: #3e2b2b;  /* النص داخل الزر باللون البني الغامق */
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 300px;
+}
+
+button:hover {
+  background-color: #e9bcbc;
+  color: white;
+}
+
+/* تنسيق الفوتر */
+footer {
+  background-color: #f7d3d3;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3e2b2b;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #3e2b2b;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* صفحة كريم أساس */
+
+/* تنسيق العنوان "كريم أساس" */
+h1 {
+  font-size: 36px;
+  color: #3e2b2b;  /* اللون البني الغامق للنص */
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* تنسيق المحتوى داخل main */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* تنسيق الصورة */
+main img {
+  width: 45%;  /* تحديد عرض الصورة */
+  max-width: 500px; /* تحديد أقصى عرض للصورة */
+  border-radius: 10px;
+}
+
+/* تنسيق النص */
+main p {
+  font-size: 18px;
+  color: #3e2b2b;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* تنسيق زر الإضافة إلى السلة */
+button {
+  background-color: #f7d3d3;  /* اللون الوردي الفاتح */
+  color: #3e2b2b;  /* النص داخل الزر باللون البني الغامق */
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #e9bcbc;
+  color: white;
+}
+
+/* تنسيق الفوتر */
+footer {
+  background-color: #f7d3d3;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3e2b2b;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #3e2b2b;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+/* صفحة كونسيلر */
+
+/* تنسيق العنوان "كونسيلر" */
+h1 {
+  font-size: 36px;
+  color: #3e2b2b;  /* اللون البني الغامق للنص */
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+/* تنسيق المحتوى داخل main */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* تنسيق الصورة */
+main img {
+  width: 45%;  /* تحديد عرض الصورة */
+  max-width: 500px; /* تحديد أقصى عرض للصورة */
+  border-radius: 10px;
+}
+
+/* تنسيق النص */
+main p {
+  font-size: 18px;
+  color: #3e2b2b;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* تخصيص زر الإضافة إلى السلة */
+button {
+  background-color: #f7d3d3;
+  color: #3e2b2b;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #e9bcbc;
+  color: white;
+}
+
+/* تنسيق الفوتر */
+footer {
+  background-color: #f7d3d3;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3e2b2b;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #3e2b2b;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

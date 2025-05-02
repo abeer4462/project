@@ -1,0 +1,54 @@
+<html lang="ar">
+<head>
+<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glistéra - تسجيل الدخول</title>
+</head>
+<body>
+<img src="home1.png" class="background-img">
+    <header>
+        <nav>
+            <ul class="header">
+               <li><a href="Glistéra-home.html">الصفحة الرئيسية</a></li>
+                <li><a href="shop.html">المتجر</a></li>
+                <li><a href="SkinAnalysis.html">تحليل البشرة</a></li>
+                <li><a href="cart.html">السلة</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>تسجيل الدخول</h1>
+        <form id="login-form" method="POST" action="login.php">
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">كلمة المرور:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="button" onclick="login()">تسجيل الدخول</button>
+     </form>
+     <p>ليس لديك حساب؟ <a href="newAccount.html">إنشاء حساب</a></p>
+    </main>
+
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة &copy; Glistéra</p>
+        <p>تابعونا على <a href="#">إنستقرام</a> | <a href="#">تويتر</a></p>
+    </footer>
+ <script>
+  function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (email && password) {
+      document.getElementById("login-form").submit();  // إرسال النموذج عبر PHP
+    } else {
+      alert("يرجى تعبئة جميع الحقول.");
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html lang="ar">
+<head>
+<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glistéra - أحمر شفاه</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="header">
+                <li><a href="Glistéra-home.html">الصفحة الرئيسية</a></li>
+                <li><a href="shop.html">المتجر</a></li>
+                <li><a href="SkinAnalysis.html">تحليل البشرة</a></li>
+                <li><a href="cart.html">السلة</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        <h1>أحمر شفاه</h1>
+        <img src="rouge.png" alt="أحمر شفاه">
+        <p><strong>السعر:</strong> 75 ريال</p>
+        <p><strong>نبذة:</strong> أحمر شفاه فائق الترطيب بلمسة مخملية تدوم طوال اليوم.</p>
+        <p><strong>خصائص المنتج:</strong> يحتوي على زبدة الشيا وفيتامين  لترطيب الشفاه وحمايتها.</p>
+        <div>
+            <button onclick="decreaseQuantity()">-</button>
+            <input type="number" id="quantity" value="1" min="1" readonly>
+            <button onclick="increaseQuantity()">+</button>
+        </div>
+ 
+        <button onclick="addToCart()">إضافة إلى السلة</button>
+    </main>
+ 
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة &copy; Glistéra</p>
+        <p>تابعونا على <a href="#">إنستقرام</a> | <a href="#">تويتر</a></p>
+    </footer>
+ <script>
+        function decreaseQuantity() {
+            let quantityInput = document.getElementById('quantity');
+            let currentQuantity = parseInt(quantityInput.value);
+            if (currentQuantity > 1) {
+                quantityInput.value = currentQuantity - 1;
+            }
+        }
+ 
+        function increaseQuantity() {
+            let quantityInput = document.getElementById('quantity');
+            let currentQuantity = parseInt(quantityInput.value);
+            quantityInput.value = currentQuantity + 1;
+        }
+ 
+        function addToCart() {
+            let quantity = document.getElementById('quantity').value;
+ 
+            let product = {
+                name: "أحمر شفاه",
+                price: 75,
+                quantity: quantity,
+                image: "rouge.png"
+            };
+ 
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+ 
+            window.location.href = "cart.html";
+        }
+    </script>
+</body>
+</html>

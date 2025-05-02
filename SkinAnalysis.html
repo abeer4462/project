@@ -1,0 +1,109 @@
+<html lang="ar">
+<head>
+<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glistéra - تحليل البشرة</title>
+</head>
+<body>
+<!-- يجب عمل كود جافا سكربت لحساب اكثر حرب تكرر أ او ب او ج ثم اظهار النتيجة في اسفل الصفحة-->
+    <header>
+        <nav>
+            <ul class="header">
+                <li><a href="Glistéra-home.html">الصفحة الرئيسية</a></li>
+                <li><a href="shop.html">المتجر</a></li>
+                <li><a href="SkinAnalysis.html">تحليل البشرة</a></li>
+                <li><a href="cart.html">السلة</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+  <h1>🧴✨ تحليل نوع البشرة</h1>
+        <p>أجيبي على الأسئلة التالية وسنحدد نوع بشرتك ونقترح لكِ أفضل المنتجات!</p>
+
+        <form id="skin-form">
+            <fieldset>
+                <legend>1- كيف تشعر بشرتك بعد غسل الوجه بدون ترطيب؟</legend>
+                  <label><input type="radio" name="q1" value="A"required> أ) مشدودة وجافة</label><br>
+            <label><input type="radio" name="q1" value="B"> ب) دهنية ولامعة</label><br>
+            <label><input type="radio" name="q1" value="C"> ج) متوازنة، لكن أحيانًا دهنية في بعض المناطق</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>2- كيف تتفاعل بشرتك مع الطقس الحار؟</legend>
+                 <label><input type="radio" name="q2" value="A"required> أ) تصبح أكثر جفافًا وتتقشر</label><br>
+            <label><input type="radio" name="q2" value="B"> ب) تصبح لامعة جدًا وتفرز الكثير من الزيوت</label><br>
+            <label><input type="radio" name="q2" value="C"> ج) تبقى متوازنة ولكن قد تصبح دهنية في منطقة الـT-Zone</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>3- هل تعانين من ظهور الحبوب أو المسام الواسعة؟</legend>
+                <label><input type="radio" name="q3" value="A" required> أ) نادرًا ما تظهر لدي حبوب أو مسام واسعة</label><br>
+            <label><input type="radio" name="q3" value="B"> ب) نعم، لدي مسام واسعة وحبوب متكررة</label><br>
+            <label><input type="radio" name="q3" value="C"> ج) أحيانًا، لكنها ليست مشكلة كبيرة</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>4- ما هو أكبر تحدٍ تواجهينه مع الفاونديشن؟</legend>
+                  <label><input type="radio" name="q4" value="A"required> أ) يظهر على بشرتي بشكل متشقق أو جاف بعد فترة قصيرة</label><br>
+            <label><input type="radio" name="q4" value="B"> ب) يذوب بسرعة ويصبح لامعًا جدًا خلال اليوم</label><br>
+            <label><input type="radio" name="q4" value="C"> ج) يبدو جيدًا في البداية لكنه يحتاج لضبط في بعض المناطق</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>5- كيف تشعرين عند استخدام مرطب ثقيل؟</legend>
+                <label><input type="radio" name="q5" value="A"required> أ) بشرتي تمتصه بالكامل وأشعر براحة</label><br>
+            <label><input type="radio" name="q5" value="B"> ب) يجعل بشرتي دهنية أكثر ويتسبب بظهور الحبوب</label><br>
+            <label><input type="radio" name="q5" value="C"> ج) يناسبني لكن أفضّل المرطبات الخفيفة</label>
+            </fieldset>
+
+            <button type="submit">إرسال الإجابات</button>
+   <div id="result" style="margin-top: 20px; font-weight: bold; font-size: 20px;"></div>
+   
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p>جميع الحقوق محفوظة &copy; Glistéra</p>
+        <p>تابعونا على <a href="#">إنستقرام</a> | <a href="#">تويتر</a></p>
+    </footer>
+ <script>
+document.getElementById("skin-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // يمنع الفورم من التحديث
+
+    let a = 0, b = 0, c = 0;
+
+    // نحسب كل إجابة
+    ["q1", "q2", "q3", "q4", "q5"].forEach(q => {
+        let answer = document.querySelector('input[name="' + q + '"]:checked');
+        if (answer) {
+            if (answer.value.includes("A")) a++;
+			if (answer.value.includes("B")) b++;
+            if (answer.value.includes("C")) c++;
+        }
+    });
+
+    // نحدد النتيجة بدون مساواة
+    let result = "";
+
+    let ترتيب = [a, b, c];
+    let أكبر_قيمة = Math.max(...ترتيب);
+
+    if (a >= أكبر_قيمة) {
+        result = "بشرتك جافة";
+    }
+    if (b >= أكبر_قيمة) {
+        result = "بشرتك دهنية";
+    }
+    if (c >= أكبر_قيمة) {
+        result = "بشرتك مختلطة";
+    }
+
+    document.getElementById("result").innerText = result;
+});
+</script>
+</body>
+</html>
